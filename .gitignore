@@ -1,0 +1,25 @@
+# Local overrides / secrets — never commit real licenses or credentials
+values.local.yaml
+*.local.yaml
+license.txt
+*.license
+.env
+
+*.md
+!README.md
+
+# Directories
+.claude/
+
+# Helm
+charts/
+*.tgz
+
+# Logs
+*.log
+
+# OS / editor cruft
+.DS_Store
+*.swp
+.idea/
+.vscode/
