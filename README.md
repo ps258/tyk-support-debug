@@ -29,7 +29,7 @@ Start minikube with enough resources for the full stack (Gateway, Dashboard, Pum
 Redis and PostgreSQL):
 
 ```
-minikube start --cpus=4 --memory=8192
+minikube start
 ```
 
 Notes:
