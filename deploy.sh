@@ -35,6 +35,7 @@ info "Installing Redis (release: tyk-redis)"
 helm upgrade --install tyk-redis oci://registry-1.docker.io/bitnamicharts/redis \
   -n "$NAMESPACE" --create-namespace \
   --version 19.0.2 \
+  --set replica.replicaCount=0 \
   --set image.repository=bitnamilegacy/redis \
   --set auth.password=topsecretpassword
 
