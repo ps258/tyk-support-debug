@@ -30,7 +30,7 @@ helm repo add tyk-helm https://helm.tyk.io/public/helm/charts/
 helm repo update
 
 Info "Installing Redis (release: tyk-redis)"
-helm upgrade --install tyk-redis oci://registry-1.docker.io/bitnamicharts/redis -n $Namespace --create-namespace --version 19.0.2 --set image.repository=bitnamilegacy/redis --set auth.password=topsecretpassword
+helm upgrade --install tyk-redis oci://registry-1.docker.io/bitnamicharts/redis -n $Namespace --create-namespace --version 19.0.2 --set image.repository=bitnamilegacy/redis --set auth.password=topsecretpassword --set replica.replicaCount=0
 
 Info "Installing PostgreSQL (release: tyk-postgres)"
 helm upgrade --install tyk-postgres bitnami/postgresql -n $Namespace --create-namespace --version 12.12.10 --set image.repository=bitnamilegacy/postgresql --set auth.database=tyk_analytics --set auth.postgresPassword=topsecretpassword
